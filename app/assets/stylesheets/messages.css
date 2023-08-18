@@ -33,9 +33,9 @@
 }
 
 .create-btn a{
-  font-size: 10px;
   color: deepskyblue;
   text-decoration: none;
+  font-size: 10px;
   padding: 14px;
   border: 1px solid lightblue;
 }
@@ -62,6 +62,10 @@
 チャット画面
 **************************************************/
 
+
+/*　チャットヘッダー　*/
+
+
 .chat {
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
@@ -70,16 +74,107 @@
 .chat-header {
   height: 100px;
   padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
+
+.current-room {
+  font-size: 24px;
+  color: #333;
+  margin-top: 36px;
+}
+
+.end-btn {
+  margin-top: 40px;
+}
+
+.end-btn a{
+  text-decoration: none;
+  color: darkred;
+  border: 1px solid darkred;
+  padding: 20px;
+}
+
+
+/*　チャットメイン　*/
+
 
 .talk {
   background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
+  overflow: scroll;
 }
 
-.text-box {
+.message-box {
+  margin-bottom: 40px;
+}
+
+.name-at {
+  display: flex;
+}
+
+.user-name {
+  font-size: 16px;
+  color: #434A54;
+  padding: 10px 10px 10px 0;
+}
+
+.create-at {
+  font-size: 12px;
+  color: #999;
+  padding: 10px 0;
+}
+
+.message {
+  font-size: 14px;
+  color: #434A54;
+}
+
+
+/*　チャット送信　*/
+
+
+.form-box {
   background-color: #DDDDDD;
   height: 90px;
   padding: 20px 40px;
+  display: flex;
+}
+
+.text-form {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.message-field {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.text-btn {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 20px;
+  margin-left: 15px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
