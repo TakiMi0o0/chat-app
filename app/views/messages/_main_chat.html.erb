@@ -2,7 +2,7 @@
   <div class="current-room">Maker's Mark
   </div>
   <div class="end-btn">
-    <a href="#">チャットを終了する</a>
+    <%= link_to 'チャットを終了する', '/' %>
   </div>
 </div>
 <div class="talk">
@@ -16,34 +16,18 @@
     <div class="message">こんにちは
     </div>
   </div>
-    <div class="message-box">
-    <div class="name-at">
-      <div class="user-name">Takimi
-      </div>
-      <div class="create-at">2023/08/18(fri) 18:29:52
-      </div>
-    </div>
-    <div class="message">ねえねえ、
-    </div>
-  </div>
-    <div class="message-box">
-    <div class="name-at">
-      <div class="user-name">Takimi
-      </div>
-      <div class="create-at">2023/08/18(fri) 18:29:57
-      </div>
-    </div>
-    <div class="message">こんにちは
-    </div>
-  </div>
 </div>
 <div class="form-box">
-  <div class="text-form">
-    <input class="message-field" placeholder="type a message">
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <input type="file" class="hidden">
-    </label>
-  </div>
-  <input class="text-btn" type="submit" value="送信">
+  <%= form_with model: [@room, @message], class: 'form', local:true do |f| %>
+    <div class="text-form">
+      <%= f.text_field :content, class: 'message-field', placeholder: 'type a message' %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <input type="file" class="hidden">
+      </label>
+    </div>
+    <div class="form-submit">
+      <%= f.submit '送信' %>
+    </div>
+  <% end %>
 </div>
